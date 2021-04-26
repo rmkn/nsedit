@@ -1,8 +1,8 @@
 FROM rmkn/php7-centos7
-MAINTAINER rmkn
+LABEL maintainer "rmkn"
 
 RUN yum -y install git
-RUN yum -y install --enablerepo=remi,remi-php72 php-pdo
+RUN yum -y install --enablerepo=remi,remi-php74 php-pdo
 
 WORKDIR /var/www/
 RUN git clone https://github.com/tuxis-ie/nsedit.git
